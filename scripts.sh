@@ -6,7 +6,7 @@ do
     MAX_REPLICAS=$(echo $line | cut -d ' ' -f 3)
     cat <<EOF >> output.yaml
 ---
-Instance ${INSTANCE_NAME}
-Replicas ${MAX_REPLICAS}
+Instance \${INSTANCE_NAME}
+Replicas \${MAX_REPLICAS}
 EOF
 done < output.txt
